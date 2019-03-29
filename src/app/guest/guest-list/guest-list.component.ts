@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component
 ({
-  selector: 'app-guest',
-  templateUrl: './guest.component.html',
-  styleUrls: ['./guest.component.css']
+  selector: 'app-guest-list',
+  templateUrl: './guest-list.component.html',
+  styleUrls: ['./guest-list.component.css']
 })
-export class GuestComponent implements OnInit 
+export class GuestListComponent implements OnInit 
 {
 
   constructor() { }

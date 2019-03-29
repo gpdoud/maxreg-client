@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Guest } from './guest';
+import { Guest } from './guest.class';
 
 const url = 'http://localhost:56290/api/';
 
