@@ -2,10 +2,12 @@ import { Injectable } from '@angular/core';
 
 const url = "http://localhost:52132/api/"
 
-@Injectable({
+@Injectable
+({
   providedIn: 'root'
 })
-export class EventService {
+export class EventService 
+{
 
   constructor() { }
 }
