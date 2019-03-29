@@ -8,6 +8,8 @@ import{FormsModule} from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
 import { GuestDetailComponent } from './guest/guest-detail/guest-detail.component';
 import { GuestComponent } from './guest/guest/guest.component';
+import { GuestEditComponent } from './guest/guest-edit/guest-edit.component';
+import { GuestCreateComponent } from './guest/guest-create/guest-create.component';
 
 @NgModule
 ({
@@ -15,7 +17,9 @@ import { GuestComponent } from './guest/guest/guest.component';
   [
     AppComponent,
     GuestDetailComponent,
-    GuestComponent
+    GuestComponent,
+    GuestEditComponent,
+    GuestCreateComponent
   ],
   imports: 
   [
