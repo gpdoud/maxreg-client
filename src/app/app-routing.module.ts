@@ -20,6 +20,11 @@ import { AttendeeDetailComponent } from './attendee/attendee-detail/attendee-det
 import { AttendeeEditComponent } from './attendee/attendee-edit/attendee-edit.component';
 import { AttendeeCreateComponent } from './attendee/attendee-create/attendee-create.component';
 
+import { UserDetailComponent } from './user/user-detail/user-detail.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { UserCreateComponent } from './user/user-create/user-create.component';
+
 const routes: Routes = [
   { path: 'attendee/list', component: AttendeeListComponent },
   { path: 'attendee/edit', component: AttendeeEditComponent },
@@ -34,7 +39,12 @@ const routes: Routes = [
   { path: 'guest/list', component: GuestListComponent },
   { path: 'guest/edit/:id', component: GuestEditComponent },
   { path: 'guest/create', component: GuestCreateComponent },
-  { path: 'guest/detail/:id', component: GuestDetailComponent }
+  { path: 'guest/detail/:id', component: GuestDetailComponent },
+
+  { path: 'user/list', component: UserListComponent },
+  { path: 'user/edit/:id', component: UserEditComponent },
+  { path: 'user/create', component: UserCreateComponent },
+  { path: 'user/detail/:id', component: UserDetailComponent }
 
 ];
 

@@ -12,7 +12,8 @@ import { Router } from '@angular/router';
 export class GuestListComponent implements OnInit {
 
   guests: Guest[];
-
+  searchCriteria: string = "";
+  
   constructor(private gsrv: GuestService,
     private router: Router) { }
 
