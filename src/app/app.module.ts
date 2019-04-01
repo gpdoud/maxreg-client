@@ -21,6 +21,9 @@ import { AttendeeListComponent } from './attendee/attendee-list/attendee-list.co
 import { AttendeeDetailComponent } from './attendee/attendee-detail/attendee-detail.component';
 import { AttendeeEditComponent } from './attendee/attendee-edit/attendee-edit.component';
 import { AttendeeCreateComponent } from './attendee/attendee-create/attendee-create.component';
+import { MenuComponent } from './menu/menu.component';
+import { SearchPipe } from './search.pipe';
+import { MenuItemComponent } from './menu-item/menu-item.component';
 
 @NgModule
 ({
@@ -38,7 +41,10 @@ import { AttendeeCreateComponent } from './attendee/attendee-create/attendee-cre
     AttendeeListComponent,
     AttendeeDetailComponent,
     AttendeeEditComponent,
-    AttendeeCreateComponent
+    AttendeeCreateComponent,
+    MenuComponent,
+    SearchPipe,
+    MenuItemComponent
   ],
   imports: 
   [
