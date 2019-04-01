@@ -1,7 +1,7 @@
-import { Guest } from './guest';
+import { Guest } from './guest.class';
 
 describe('Guest', () => {
   it('should create an instance', () => {
-    expect(new Guest()).toBeTruthy();
+    expect(new Guest("", "", "")).toBeTruthy();
   });
 });
