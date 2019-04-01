@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+import{Guest} from '../guest.class';
+import{ServiceService} from '../guest.service';
+import{Router} from '@angular/router';
+
 
 @Component
 ({
@@ -9,10 +13,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GuestListComponent implements OnInit 
 {
+  guests:Guest[];
 
-  constructor() { }
+  constructor(private gsrv:ServiceService,
+    private router: Router) { }
 
   ngOnInit() {
+    this.gsrv.list()
+    .subscribe(resp => {
+      console.log(resp);
+      this.guests = resp;
+    })
+
   }
 
 }

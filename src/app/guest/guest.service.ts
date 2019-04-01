@@ -3,7 +3,7 @@ import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Guest } from './guest.class';
 
-const url = 'http://localhost:56290/api/';
+const url = 'http://localhost:56290/api';
 
 @Injectable
 ({
