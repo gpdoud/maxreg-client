@@ -9,7 +9,7 @@ const url = 'http://localhost:56290/api/';
 ({
   providedIn: 'root'
 })
-export class ServiceService 
+export class GuestService 
 {
 
   list(): Observable<Guest[]>
