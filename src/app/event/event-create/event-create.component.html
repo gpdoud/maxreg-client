@@ -1,4 +1,24 @@
 <app-menu></app-menu>
-<p>
-  event-create works!
-</p>
+<div>
+  <div>
+    <span class="pagetitle h5">Edit Guest</span>
+  </div>
+  <table *ngIf="event" class="table table-sm table-bordered" style="width:350px">
+    <tr>
+      <td>Name</td>
+      <td><input [(ngModel)]="event.name" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>Date</td>
+      <td><input [(ngModel)]="event.date" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>Active</td>
+      <td><input [(ngModel)]="event.active" class="inputstring" type="checkbox"></td>
+    </tr>
+  </table>
+  <span><button (click)="save()" class="btn btn-success">Save</button></span>
+  <p>
+    <a routerLink="/event/list">Back to Event List</a>
+  </p>
+</div>
