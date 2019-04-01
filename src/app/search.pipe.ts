@@ -27,5 +27,5 @@ export class SearchPipe implements PipeTransform {
     }
     return arrOut;
   }
-
+  }
 }

@@ -23,6 +23,7 @@ import { AttendeeEditComponent } from './attendee/attendee-edit/attendee-edit.co
 import { AttendeeCreateComponent } from './attendee/attendee-create/attendee-create.component';
 import { MenuComponent } from './menu/menu.component';
 import { SearchPipe } from './search.pipe';
+import { MenuItemComponent } from './menu-item/menu-item.component';
 
 @NgModule
 ({
@@ -42,7 +43,8 @@ import { SearchPipe } from './search.pipe';
     AttendeeEditComponent,
     AttendeeCreateComponent,
     MenuComponent,
-    SearchPipe
+    SearchPipe,
+    MenuItemComponent
   ],
   imports: 
   [
