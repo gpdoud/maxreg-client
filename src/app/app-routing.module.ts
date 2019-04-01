@@ -2,8 +2,8 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
-import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { GuestDetailComponent } from './guest/guest-detail/guest-detail.component';
 import { GuestListComponent } from './guest/guest-list/guest-list.component';
@@ -20,10 +20,22 @@ import { AttendeeDetailComponent } from './attendee/attendee-detail/attendee-det
 import { AttendeeEditComponent } from './attendee/attendee-edit/attendee-edit.component';
 import { AttendeeCreateComponent } from './attendee/attendee-create/attendee-create.component';
 
-import { GuestListComponent } from './guest/guest-list/guest-list.component';
-
 const routes: Routes = [
-  {path: 'guest/list', component: GuestListComponent}
+  { path: 'attendee/list', component: AttendeeListComponent },
+  { path: 'attendee/edit', component: AttendeeEditComponent },
+  { path: 'attendee/create', component: AttendeeCreateComponent },
+  { path: 'attendee/detail', component: AttendeeDetailComponent },
+
+  { path: 'event/list', component: EventListComponent },
+  { path: 'event/edit/:id', component: EventEditComponent },
+  { path: 'event/create', component: EventCreateComponent },
+  { path: 'event/detail/:id', component: EventDetailComponent },
+
+  { path: 'guest/list', component: GuestListComponent },
+  { path: 'guest/edit/:id', component: GuestEditComponent },
+  { path: 'guest/create', component: GuestCreateComponent },
+  { path: 'guest/detail/:id', component: GuestDetailComponent }
+
 ];
 
 @NgModule({

@@ -1,3 +1,28 @@
-<p>
-  guest-create works!
-</p>
+<div>
+  <div>
+    <span class="pagetitle h5">Create New Guest</span>
+  </div>
+  <table class="table table-sm table-bordered" style="width:350px">
+    <tr>
+      <td>First Name</td>
+      <td><input [(ngModel)]="guest.firstname" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>Last Name</td>
+      <td><input [(ngModel)]="guest.lastname" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td><input [(ngModel)]="guest.phone" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input [(ngModel)]="guest.email" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>Active</td>
+      <td><input [(ngModel)]="guest.active" class="inputstring" type="checkbox"></td>
+    </tr>
+  </table>
+  <button (click)="save()" class="btn btn-success">Save</button>
+  <div>

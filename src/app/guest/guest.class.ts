@@ -1,15 +1,17 @@
-export class Guest 
-{
+export class Guest {
     id: number;
-    name: string;
+    firstname: string;
+    lastname: string;
     email: string;
     phone: string;
+    active: boolean;
 
-    constructor(name: string, email: string, phone: string)
-    {
+    constructor() {
         this.id = 0;
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
+        this.firstname = "";
+        this.lastname = "";
+        this.email = "";
+        this.phone = "";
+        this.active = false;
     }
 }

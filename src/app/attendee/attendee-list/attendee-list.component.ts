@@ -1,15 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component({
-  selector: 'app-attendee-list',
-  templateUrl: './attendee-list.component.html',
-  styleUrls: ['./attendee-list.component.css']
-})
-export class AttendeeListComponent implements OnInit {
+import { Attendee } from '../attendee.class';
+import { AttendeeService } from '../attendee.service';
+import { Router } from '@angular/router';
 
-  constructor() { }
+
+@Component
+  ({
+    selector: 'app-attendee-list',
+    templateUrl: './attendee-list.component.html',
+    styleUrls: ['./attendee-list.component.css']
+  })
+export class AttendeeListComponent implements OnInit {
+  attendees: Attendee[];
+
+  constructor(private gsrv: AttendeeService,
+    private router: Router) { }
 
   ngOnInit() {
+    this.gsrv.list()
+      .subscribe(resp => {
+        console.log(resp);
+        this.attendees = resp;
+      })
+
   }
 
 }
