@@ -9,6 +9,10 @@
       <td><input [(ngModel)]="user.username" class="inputstring" type="text"></td>
     </tr>
     <tr>
+      <td>Password</td>
+      <td><input [(ngModel)]="user.password" class="inputstring" type="password"></td>
+    </tr>
+    <tr>
       <td>First Name</td>
       <td><input [(ngModel)]="user.firstname" class="inputstring" type="text"></td>
     </tr>
@@ -27,7 +31,7 @@
   </table>
   <span><button (click)="edit()" class="btn btn-success">Update</button> | </span>
   <span><button (click)="setVerifyT()" class="btn btn-warning">Delete</button></span>
-  <span *ngIf="verify" >
+  <span *ngIf="verify">
     <span> | <button (click)="setVerifyF()" class="btn btn-secondary">Cancel Delete</button></span>
     <span> | <button (click)="delete()" class="btn btn-danger">Verify Delete</button></span>
   </span>

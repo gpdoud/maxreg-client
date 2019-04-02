@@ -30,6 +30,8 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './user/login/login.component';
 
 const routes: Routes = [
+  { path: '', component: LoginComponent },
+
   { path: 'attendee/list/:eid', component: AttendeeListComponent },
   { path: 'attendee/edit/:id', component: AttendeeEditComponent },
   { path: 'attendee/create/:eid', component: AttendeeCreateComponent },
@@ -52,8 +54,9 @@ const routes: Routes = [
 
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'login', component: LoginComponent },
 
-  {path: '**', component: HomeComponent} //last route always
+  { path: '**', component: HomeComponent } //last route always
 ];
 
 @NgModule({

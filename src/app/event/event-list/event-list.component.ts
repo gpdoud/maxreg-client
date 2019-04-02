@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Event } from '../event.class';
 import { EventService } from '../event.service';
 import { Router } from '@angular/router';
 import { Guest } from '../../guest/guest.class'
 import { GuestService } from '../../guest/guest.service'
-
 
 @Component
   ({
@@ -17,6 +15,7 @@ export class EventListComponent implements OnInit {
 
   events: Event[];
   guests: Guest[];
+
   constructor(
     private esrv: EventService,
     private gsrv: GuestService,
