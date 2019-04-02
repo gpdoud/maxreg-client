@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Event } from '../event.class';
 import { EventService } from '../event.service';
 import { Router } from '@angular/router';
+import { Guest } from '../../guest/guest.class'
+import { GuestService } from '../../guest/guest.service'
 
 
 @Component
@@ -12,18 +14,26 @@ import { Router } from '@angular/router';
     styleUrls: ['./event-list.component.css']
   })
 export class EventListComponent implements OnInit {
-  events: Event[];
 
-  constructor(private gsrv: EventService,
-    private router: Router) { }
+  events: Event[];
+  guests: Guest[];
+  constructor(
+    private esrv: EventService,
+    private gsrv: GuestService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
-    this.gsrv.list()
+    this.esrv.list()
       .subscribe(resp => {
         console.log(resp);
         this.events = resp;
       })
-
+    this.gsrv.list()
+      .subscribe(resp => {
+        console.log(resp);
+        this.guests = resp;
+      })
   }
 
 }

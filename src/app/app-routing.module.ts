@@ -27,8 +27,10 @@ import { UserCreateComponent } from './user/user-create/user-create.component';
 
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './user/login/login.component';
 
 const routes: Routes = [
+  { path: 'login',                  component: LoginComponent },
   { path: 'attendee/list', component: AttendeeListComponent },
   { path: 'attendee/edit', component: AttendeeEditComponent },
   { path: 'attendee/create', component: AttendeeCreateComponent },
