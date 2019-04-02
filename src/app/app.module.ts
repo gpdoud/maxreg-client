@@ -33,6 +33,8 @@ import { UserListComponent } from './user/user-list/user-list.component';
 
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './user/login/login.component';
+
 
 @NgModule
 ({
@@ -59,7 +61,8 @@ import { AboutComponent } from './about/about.component';
     UserEditComponent,
     UserListComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    LoginComponent,
   ],
   imports: 
   [

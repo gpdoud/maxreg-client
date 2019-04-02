@@ -27,6 +27,7 @@ import { UserCreateComponent } from './user/user-create/user-create.component';
 
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './user/login/login.component';
 
 const routes: Routes = [
   { path: 'attendee/list/:eid', component: AttendeeListComponent },
