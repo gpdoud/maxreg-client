@@ -1,3 +1,39 @@
-<p>
-  user-detail works!
-</p>
+<app-menu></app-menu>
+<div *ngIf="user">
+  <div>
+    <span class="pagetitle h5">User Detail</span>
+  </div>
+  <div>
+    <table class="table table-sm table-hover table-bordered" style="width:400px">
+      <thead>
+        <tr>
+          <td>First Name</td>
+          <td>{{user.firstname}}</td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td>{{user.lastname}}</td>
+        </tr>
+        <tr>
+          <td>Admin</td>
+          <td>{{user.isAdmin}}</td>
+        </tr>
+        <tr>
+          <td>Active</td>
+          <td>{{user.active}}</td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <span><button (click)="edit()" class="btn btn-success">Edit</button> | </span>
+    <span><button (click)="setVerifyT()" class="btn btn-warning">Delete</button></span>
+    <span *ngIf="verify">
+      <span> | <button (click)="setVerifyF()" class="btn btn-secondary">Cancel Delete</button></span>
+      <span> | <button (click)="delete()" class="btn btn-danger">Verify Delete</button></span>
+    </span>
+    <div>
+      <a routerLink="/user/list">Back to User List</a>
+    </div>
+  </div>
+</div>

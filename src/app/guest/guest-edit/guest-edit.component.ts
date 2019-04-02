@@ -34,7 +34,7 @@ export class GuestEditComponent implements OnInit {
           this.router.navigateByUrl('guest/list')
         },
         err => {
-          console.error("Geust Delete Failed!")
+          console.error("Guest Delete Failed!")
         }
       );
   }
