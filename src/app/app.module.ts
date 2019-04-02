@@ -31,6 +31,9 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+
 @NgModule
 ({
   declarations: 
@@ -54,7 +57,9 @@ import { UserListComponent } from './user/user-list/user-list.component';
     UserCreateComponent,
     UserDetailComponent,
     UserEditComponent,
-    UserListComponent
+    UserListComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: 
   [

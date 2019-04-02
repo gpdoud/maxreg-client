@@ -25,6 +25,9 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
 
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+
 const routes: Routes = [
   { path: 'attendee/list', component: AttendeeListComponent },
   { path: 'attendee/edit', component: AttendeeEditComponent },
@@ -44,8 +47,10 @@ const routes: Routes = [
   { path: 'user/list', component: UserListComponent },
   { path: 'user/edit/:id', component: UserEditComponent },
   { path: 'user/create', component: UserCreateComponent },
-  { path: 'user/detail/:id', component: UserDetailComponent }
+  { path: 'user/detail/:id', component: UserDetailComponent },
 
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({
