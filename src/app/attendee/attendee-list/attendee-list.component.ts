@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Event } from '../../event/event.class';
 import { Attendee } from '../attendee.class';
 import { AttendeeService } from '../attendee.service';
-import { Router } from '@angular/router';
+import { EventService } from '../../event/event.service';
+import { ActivatedRoute ,Router } from '@angular/router';
 
 
 @Component
@@ -11,17 +12,50 @@ import { Router } from '@angular/router';
     templateUrl: './attendee-list.component.html',
     styleUrls: ['./attendee-list.component.css']
   })
-export class AttendeeListComponent implements OnInit {
-  attendees: Attendee[];
+export class AttendeeListComponent implements OnInit 
+{
+  event: Event;
+  attendees: Attendee;
 
-  constructor(private gsrv: AttendeeService,
-    private router: Router) { }
 
-  ngOnInit() {
-    this.gsrv.list()
+  refresh(): void 
+  {
+    this.esrv.get(this.event.id.toString())
+      .subscribe
+      (
+        resp => this.event = resp
+      );
+  };
+
+  delete(attendees: Attendee): void
+  {
+    this.asrv.remove(attendees)
+      .subscribe
+      (
+        resp =>
+        {
+          console.log("Attendee Delete Successful", resp);
+          this.refresh();
+        },
+        err =>
+        {
+          console.error("Delete Failed", err);
+        }
+      );
+  }
+
+  constructor(private asrv: AttendeeService, private esrv: EventService,
+    private router: Router, private route: ActivatedRoute) { }
+
+  ngOnInit() 
+  {
+    let id = this.route.snapshot.params.eid;
+
+
+    this.esrv.get(id)
       .subscribe(resp => {
         console.log(resp);
-        this.attendees = resp;
+        this.event = resp;
       })
 
   }

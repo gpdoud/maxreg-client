@@ -29,11 +29,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/login', pathMatch: 'full'}, //1st route always
-
-  { path: 'attendee/list', component: AttendeeListComponent },
-  { path: 'attendee/edit', component: AttendeeEditComponent },
-  { path: 'attendee/create', component: AttendeeCreateComponent },
+  { path: 'attendee/list/:eid', component: AttendeeListComponent },
+  { path: 'attendee/edit/:id', component: AttendeeEditComponent },
+  { path: 'attendee/create/:eid', component: AttendeeCreateComponent },
   { path: 'attendee/detail', component: AttendeeDetailComponent },
 
   { path: 'event/list', component: EventListComponent },

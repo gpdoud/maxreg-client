@@ -1,3 +1,34 @@
-<p>
-  attendee-list works!
-</p>
+<app-menu></app-menu>
+<div><h1 class="text-danger">Attendee List</h1>
+<div *ngIf="event"><a routerLink="/attendee/create/{{event.id}}">Create</a></div>
+<!-- <div><input [(ngModel)]="rsearchCriteria" type="text"></div> -->
+</div>
+<table *ngIf="event"  class="table text-center">
+  <thead class="font-weight-bold">
+    <td>Date</td>
+    <td>Name</td>
+  </thead>
+  <tbody>
+    <td>{{event.date}}</td>
+    <td>{{event.name}}</td>
+  </tbody>
+</table>
+<table *ngIf="event" class="table table-striped text-center">
+  <thead class="font-weight-bold">
+    <td>Name</td>
+    <td>Phone</td>
+    <td>Email</td>
+    <td>Actions</td>
+  </thead>
+  <tbody>
+    <tr *ngFor="let attendee of event.attendees">
+      <td>{{attendee.name}}</td>
+      <td>
+          <!-- <a routerLink="/requestLine/edit/{{requestLine.id}}">Edit</a> |
+          <button (click)="delete(requestLine)">Remove</button>
+           -->
+      </td>
+    </tr>
+
+  </tbody>
+</table>
