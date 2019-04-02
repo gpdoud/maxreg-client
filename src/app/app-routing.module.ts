@@ -30,10 +30,9 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './user/login/login.component';
 
 const routes: Routes = [
-  { path: 'login',                  component: LoginComponent },
-  { path: 'attendee/list', component: AttendeeListComponent },
-  { path: 'attendee/edit', component: AttendeeEditComponent },
-  { path: 'attendee/create', component: AttendeeCreateComponent },
+  { path: 'attendee/list/:eid', component: AttendeeListComponent },
+  { path: 'attendee/edit/:id', component: AttendeeEditComponent },
+  { path: 'attendee/create/:eid', component: AttendeeCreateComponent },
   { path: 'attendee/detail', component: AttendeeDetailComponent },
 
   { path: 'event/list', component: EventListComponent },
@@ -53,6 +52,8 @@ const routes: Routes = [
 
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+
+  {path: '**', component: HomeComponent} //last route always
 ];
 
 @NgModule({

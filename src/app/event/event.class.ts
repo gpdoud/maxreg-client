@@ -1,10 +1,12 @@
-export class Event {
+export class Event 
+{
     id: number;
     name: string;
     date: string;
     active: boolean;
 
-    constructor() {
+    constructor() 
+    {
         this.id = 0;
         this.name = name;
         this.date = "";

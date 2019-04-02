@@ -9,10 +9,11 @@ const url = 'http://localhost:56290/api';
   ({
     providedIn: 'root'
   })
-export class AttendeeService {
+export class AttendeeService 
+{
 
-  list(): Observable<Attendee[]> {
-    return this.http.get(`${url}/attendees`) as Observable<Attendee[]>;
+  list(): Observable<Event[]> {
+    return this.http.get(`${url}/events`) as Observable<Event[]>;
 
   }
   get(id: string): Observable<Attendee> {
