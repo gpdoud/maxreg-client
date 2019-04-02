@@ -3,7 +3,7 @@ import { Event } from '../../event/event.class';
 import { Attendee } from '../attendee.class';
 import { AttendeeService } from '../attendee.service';
 import { EventService } from '../../event/event.service';
-import { ActivatedRoute ,Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component
@@ -12,14 +12,12 @@ import { ActivatedRoute ,Router } from '@angular/router';
     templateUrl: './attendee-list.component.html',
     styleUrls: ['./attendee-list.component.css']
   })
-export class AttendeeListComponent implements OnInit 
-{
+export class AttendeeListComponent implements OnInit {
   event: Event;
   attendees: Attendee;
 
 
-  refresh(): void 
-  {
+  refresh(): void {
     this.esrv.get(this.event.id.toString())
       .subscribe
       (
@@ -27,18 +25,15 @@ export class AttendeeListComponent implements OnInit
       );
   };
 
-  delete(attendees: Attendee): void
-  {
+  delete(attendees: Attendee): void {
     this.asrv.remove(attendees)
       .subscribe
       (
-        resp =>
-        {
+        resp => {
           console.log("Attendee Delete Successful", resp);
           this.refresh();
         },
-        err =>
-        {
+        err => {
           console.error("Delete Failed", err);
         }
       );
@@ -47,8 +42,7 @@ export class AttendeeListComponent implements OnInit
   constructor(private asrv: AttendeeService, private esrv: EventService,
     private router: Router, private route: ActivatedRoute) { }
 
-  ngOnInit() 
-  {
+  ngOnInit() {
     let id = this.route.snapshot.params.eid;
 
 
