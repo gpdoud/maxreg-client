@@ -29,6 +29,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
+  {path: '', redirectTo: '/login', pathMatch: 'full'}, //1st route always
+
   { path: 'attendee/list', component: AttendeeListComponent },
   { path: 'attendee/edit', component: AttendeeEditComponent },
   { path: 'attendee/create', component: AttendeeCreateComponent },
@@ -51,6 +53,8 @@ const routes: Routes = [
 
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+
+  {path: '**', component: HomeComponent} //last route always
 ];
 
 @NgModule({
