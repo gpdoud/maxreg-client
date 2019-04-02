@@ -1,4 +1,22 @@
 <app-menu></app-menu>
-<p>
-  home works!
-</p>
+
+<div class="text-center">
+<h2 >Welcome to MAX!</h2>
+
+  <div>
+      <span class="pagetitle h5">Todays Events:</span>
+  </div>
+  <div *ngFor=" let t of todayEvents" class="btn-group">
+
+      <a routerLink = "/event/detail/{{t.id}}"><button>{{ t.name }}</button></a>
+   
+   </div>
+
+   <div>
+        <span class="pagetitle h5">Upcoming Events:</span>
+    </div>
+        <div *ngFor=" let e of events" class="btn-group">
+
+        <a routerLink = "/event/detail/{{e.id}}"><button>{{ e.name }}</button></a>
+    </div>
+</div>
