@@ -14,8 +14,9 @@
       <td>{{ e.name }}</td>
       <td>{{ e.date }}</td>
       <td>
-        <a routerLink="/event/detail/{{e.id}}">Detail |</a>
-        <a routerLink="/event/edit/{{e.id}}"> Edit</a> 
+          <a routerLink="/event/detail/{{e.id}}">Detail</a><span> | </span>
+          <a routerLink="/event/edit/{{e.id}}">Edit</a><span> | </span>
+          <a routerLink="/attendee/list/{{e.id}}">Attendee</a>
       </td>
     </tr>
   </table>
