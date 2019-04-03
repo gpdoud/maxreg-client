@@ -1,34 +1,36 @@
 <app-menu></app-menu>
 <div><h1 class="text-danger">Attendee List</h1>
-<div *ngIf="event"><a routerLink="/attendee/create/{{event.id}}">Create</a></div>
-<!-- <div><input [(ngModel)]="rsearchCriteria" type="text"></div> -->
+  <div *ngIf="event"><a routerLink="/attendee/create/{{event.id}}">Add</a></div>
+  <div><h2 class="text-center">Event Info</h2></div>
 </div>
 <table *ngIf="event"  class="table text-center">
   <thead class="font-weight-bold">
-    <td>Date</td>
     <td>Name</td>
+    <td>Date</td>
   </thead>
   <tbody>
-    <td>{{event.date}}</td>
     <td>{{event.name}}</td>
+    <td>{{event.date}}</td>
   </tbody>
 </table>
+<div>
+  <h2 class="text-center">Attendees</h2>
 <table *ngIf="event" class="table table-striped text-center">
   <thead class="font-weight-bold">
     <td>Name</td>
     <td>Phone</td>
     <td>Email</td>
-    <td>Actions</td>
+    <td>Action</td>
   </thead>
   <tbody>
     <tr *ngFor="let attendee of event.attendees">
-      <td>{{attendee.name}}</td>
+      <td>{{attendee.guest.firstname}}</td>
+      <td>{{attendee.guest.phone}}</td>
+      <td>{{attendee.guest.email}}</td>
       <td>
-          <!-- <a routerLink="/requestLine/edit/{{requestLine.id}}">Edit</a> |
-          <button (click)="delete(requestLine)">Remove</button>
-           -->
+        <button (click)="delete(attendee)">Remove</button>
       </td>
     </tr>
-
   </tbody>
 </table>
+</div>

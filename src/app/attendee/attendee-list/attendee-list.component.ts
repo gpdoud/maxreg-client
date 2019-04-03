@@ -4,6 +4,8 @@ import { Attendee } from '../attendee.class';
 import { AttendeeService } from '../attendee.service';
 import { EventService } from '../../event/event.service';
 import { ActivatedRoute ,Router } from '@angular/router';
+import { GuestService } from '../../guest/guest.service';
+import { Guest } from '../../guest/guest.class';
 
 
 @Component
@@ -16,6 +18,7 @@ export class AttendeeListComponent implements OnInit
 {
   event: Event;
   attendees: Attendee;
+  guests: Guest[];
 
 
   refresh(): void 
@@ -57,7 +60,6 @@ export class AttendeeListComponent implements OnInit
         console.log(resp);
         this.event = resp;
       })
-
   }
 
 }
