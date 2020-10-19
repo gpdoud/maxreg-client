@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+<div *ngIf="event">
+    <div>
+      <span class="pagetitle h5">Event Detail</span>
+    </div>
+    <div>
+    <table class="table table-sm table-hover table-bordered" style="width:400px">
+        <tr>  
+          <td>Name</td><td>{{event.name}}</td>
+        </tr>
+        <tr>  
+          <td>Date</td><td>{{event.date}}</td>
+        </tr>
+        <tr>  
+          <td>Active</td><td>{{event.active}}</td>
+        </tr>
+    </table>
+    <span><button (click)="edit()" class="btn btn-success">Edit</button> | </span>
+    <span><button (click)="setVerifyT()" class="btn btn-warning">Delete</button></span>
+    <span *ngIf="verify" >
+      <span> | <button (click)="setVerifyF()" class="btn btn-secondary">Cancel Delete</button></span>
+      <span> | <button (click)="delete()" class="btn btn-danger">Verify Delete</button></span>
+    </span>
+    <div>
+      <a routerLink="/event/list">Back to Event List</a>
+    </div>
+  </div>
+</div>

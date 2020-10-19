@@ -1,0 +1,16 @@
+<app-menu></app-menu>
+<table *ngIf="attendee">
+<tr>
+    <td>
+      Guests
+    </td>
+    <td>
+        <select [(ngModel)]="attendee.guestId">
+          <option *ngFor="let guest of guests" [ngValue]="guest.id">{{guest.firstname}}</option>
+        </select>
+      </td>
+  </tr>
+  <tr>
+      <button (click)= "save()">Save</button>
+    </tr>
+  </table>
